@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Player {{object.titulo}}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/player.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<main class='bg-primary_black min-h-screen w-full'>
+    <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
+        <div class="p-8 w-10/12 relative items-center" >
+            <h2 class="text-gray-200 text-2xl text-center font-medium text-orange-400">
+                {{object.titulo}}
+            </h2>
+            <div class="flex flex-wrap items-center min-w-full movie_lis videoWrapper">
+                    <iframe width="560" height="315" src="{{object.video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
