@@ -65,11 +65,9 @@ HomePage HashFlix
             <div class="flex flex-wrap items-center min-w-full movie_lis">
                 {% for filme in filmes_relacionados %}
                 <div class="m-4 bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer h-64 w-96">
-                    <a href="#">
-                            <img src="{{ filme.thumb.url }}" class="object-cover w-full h-full " alt="">
-                            <a href="{% url 'filme:detalhesfilme' filme.pk %}">
-                                <p>{{ filme.titulo }}</p>
-                            </a>
+                    <a href="{% url 'filme:detalhesfilme' filme.pk %}">
+                        <img src="{{ filme.thumb.url }}" class="object-cover w-full h-full " alt="">
+                        <p>{{ filme.titulo }}</p>
                     </a>
                     </div>
                 {% endfor %}
