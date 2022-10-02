@@ -59,13 +59,11 @@ HomePage HashFlix
                         <a href="#section1" class="arrow__btn">‹</a>
                         {% for filme in lista_filmes_recentes %}
                             {% if forloop.counter > 3 %}
-                                {% if forloop.counter > 6 %}
                                 <div class="item">
                                     <a href="{% url 'filme:detalhesfilme' filme.pk %}">
                                         <img src="{{ filme.thumb.url }}" class="rounded-md object-cover h-60">
                                     </a>
                                 </div>
-                                {% endif %}
                             {% endif %}
                         {% endfor %}
                         <a href="#section1" class="arrow__btn">›</a>
@@ -98,13 +96,11 @@ HomePage HashFlix
                         <a href="#section1-em-alta" class="arrow__btn">‹</a>
                         {% for filme in lista_filmes_emalta %}
                             {% if forloop.counter > 3 %}
-                                {% if forloop.counter > 6 %}
                                 <div class="item">
                                     <a href="{% url 'filme:detalhesfilme' filme.pk %}">
                                         <img src="{{ filme.thumb.url }}" class="rounded-md object-cover h-60">
                                     </a>
                                 </div>
-                                {% endif %}
                             {% endif %}
                         {% endfor %}
                         <a href="#section1-em-alta" class="arrow__btn">›</a>
